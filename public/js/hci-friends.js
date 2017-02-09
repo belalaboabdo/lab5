@@ -8,9 +8,16 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
+
 function initializePage() {
 	console.log("Javascript connected!");
+
 }
+$(".names").click(function(e) {
+	e.preventDefault();
+	var newText = anagrammedName($(this).text());
+	$(this).text(newText);
+});
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
